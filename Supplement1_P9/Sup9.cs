@@ -13,9 +13,12 @@ public class InvalidSequenceException : Exception
     public InvalidSequenceException(string message) : base(message) { }
 }
 
+/// <summary>
+/// 
+/// </summary>
 public class RandomFloatGenerator : IEnumerable<double>
 {
-    private Random _random = new Random(42);
+    private Random _random = new Random();
 
     public IEnumerator<double> GetEnumerator()
     {
