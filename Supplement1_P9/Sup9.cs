@@ -7,7 +7,7 @@ public class InvalidSequenceException : Exception
 
 public class RandomFloatGenerator : IEnumerable<double>
 {
-    private Random _random = new Random();
+    private Random _random = new Random(42);
 
     public IEnumerator<double> GetEnumerator()
     {
