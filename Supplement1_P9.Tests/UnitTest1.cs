@@ -46,4 +46,11 @@ public class QuarterTests
         Assert.False(q2 < q1);
         Assert.True(q2 > q1);
     }
+
+    [Fact]
+    public void Quarter_OutOfBounds_ShouldThrowException()
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() => new Quarter(1.1));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new Quarter(-0.1));
+    }
 }
