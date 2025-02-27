@@ -14,12 +14,21 @@ public class InvalidSequenceException : Exception
 }
 
 /// <summary>
-/// 
+/// Generates an infinite sequence of random floating-point numbers
+/// between 0.0 and 1.0.
 /// </summary>
 public class RandomFloatGenerator : IEnumerable<double>
 {
     private Random _random = new Random();
 
+/// <summary>
+/// Returns an enumerator that generates an infinite sequence of
+/// random floating-point numbers between 0.0 and 1.0.
+/// </summary>
+/// <returns>An enumerator that iterates through the random
+/// floating-point numbers in the sequence.</returns>
+/// <exception cref="InvalidSequenceException">Thrown when three
+/// consecutive random numbers are less than or equal to 0.5.</exception>
     public IEnumerator<double> GetEnumerator()
     {
         int count = 0;
