@@ -57,7 +57,11 @@ public class RandomFloatGenerator : IEnumerable<double>
 public class Quarter
 {
     public double Value { get; }
-
+/// <summary>
+/// Initializes a new instance of the Quarter class with a specified value.
+/// </summary>
+/// <param name="value">The value representing the quarter, which must be between 0.0 and 1.0</param>
+/// <exception cref="ArgumentOutOfRangeException">Thrown when the value is less than 0.0 or greater than or equal to 1.0.</exception>
     public Quarter(double value)
     {
         if (value < 0.0 || value >= 1.0)
