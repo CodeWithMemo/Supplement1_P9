@@ -1,4 +1,8 @@
-﻿namespace Supplement1_P9;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace Supplement1_P9;
 
 public class InvalidSequenceException : Exception
 {
