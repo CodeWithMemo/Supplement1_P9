@@ -26,7 +26,7 @@ public class UnitTest1
 public class QuarterTests
 {
     [Fact]
-    public void Quarter_Equality_ShouldBeTrueForSameQuarter()
+    public void QuarterEqualityShouldBeTrueForSameQuarter()
     {
         var q1 = new Quarter(0.1);
         var q2 = new Quarter(0.2);
@@ -34,5 +34,16 @@ public class QuarterTests
 
         Assert.True(q1 == q2);
         Assert.False(q1 == q3);
+    }
+
+    [Fact]
+    public void QuarterComparisonsShouldWorkCorrectly()
+    {
+        var q1 = new Quarter(0.1);
+        var q2 = new Quarter(0.4);
+        
+        Assert.True(q1 < q2);
+        Assert.False(q2 < q1);
+        Assert.True(q2 > q1);
     }
 }
