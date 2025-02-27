@@ -71,6 +71,18 @@ public class Quarter
 
     private int GetQuarter() => (int)(Value * 4);
 
+/// <summary>
+/// Defines the comparison and equality operators for the Quarter class.
+/// </summary>
+/// <param name="q1">The first Quarter object to compare.</param>
+/// <param name="q2">The second Quarter object to compare.</param>
+/// <returns>
+/// For equality and inequality operators:
+/// - True if the quarters are equal or not equal based on their quarter value.
+/// For comparison operators:
+/// - True if the first quarter's value is less than, greater than, less than 
+/// or equal to, or greater than or equal to the second quarter's value, respectively.
+/// </returns>
     public static bool operator ==(Quarter q1, Quarter q2) => q1.GetQuarter() == q2.GetQuarter();
     public static bool operator !=(Quarter q1, Quarter q2) => !(q1 == q2);
     public static bool operator <(Quarter q1, Quarter q2) => q1.Value < q2.Value;
