@@ -29,3 +29,27 @@ public class RandomFloatGenerator : IEnumerable<double>
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
+
+public class Quarter
+{
+    public double Value { get; }
+
+    public Quarter(double value)
+    {
+        if (value < 0.0 || value >= 1.0)
+            throw new ArgumentOutOfRangeException(nameof(value), "Value must be between 0.0 and 1.0");
+        Value = value;
+    }
+
+    private int GetQuarter() => (int)(Value * 4);
+
+    public static bool operator ==(Quarter q1, Quarter q2) => q1.GetQuarter() == q2.GetQuarter();
+    public static bool operator !=(Quarter q1, Quarter q2) => !(q1 == q2);
+    public static bool operator <(Quarter q1, Quarter q2) => q1.Value < q2.Value;
+    public static bool operator >(Quarter q1, Quarter q2) => q1.Value > q2.Value;
+    public static bool operator <=(Quarter q1, Quarter q2) => q1.Value <= q2.Value;
+    public static bool operator >=(Quarter q1, Quarter q2) => q1.Value >= q2.Value;
+    
+    public override bool Equals(object obj) => obj is Quarter other && this == other;
+    public override int GetHashCode() => GetQuarter().GetHashCode();
+}
