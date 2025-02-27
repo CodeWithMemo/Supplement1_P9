@@ -50,6 +50,10 @@ public class RandomFloatGenerator : IEnumerable<double>
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
 
+/// <summary>
+/// Represents a quarter of a unit, with a value between 0.0 and 1.0,
+/// inclusive of 0.0 but exclusive of 1.0.
+/// </summary>
 public class Quarter
 {
     public double Value { get; }
