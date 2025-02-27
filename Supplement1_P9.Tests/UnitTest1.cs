@@ -22,3 +22,8 @@ public class UnitTest1
         Assert.False(true, "Expected InvalidSequenceException to be thrown.");
     }
 }
+
+public class QuarterTests
+{
+    
+}
