@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 namespace Supplement1_P9;
 
+/// <summary>
+/// Represents an error that occurs when a sequence of numbers does 
+/// not meet the expected pattern.
+/// </summary>
 public class InvalidSequenceException : Exception
 {
     public InvalidSequenceException(string message) : base(message) { }
