@@ -44,6 +44,12 @@ namespace Supplement1_P10
                         Console.WriteLine($"Error: {ex.Message}");
                     }
                 }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter 'A' or 'Q'.");
+                }
+                }
+            }
         }
     }
 }
