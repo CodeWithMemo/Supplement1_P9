@@ -22,6 +22,18 @@ namespace Supplement1_P10
                 }
                 else if (input == "A")
                 {
+                       try
+                    {
+                        enumerator.MoveNext();
+                        double newValue = enumerator.Current;
+                        Quarter newQuarter = new Quarter(newValue);
+                        quarters.Add(newQuarter);
+                        
+                        Console.WriteLine("Current Quarters:");
+                        foreach (var group in quarters.GroupBy(q => (int)(q.Value * 4)))
+                        {
+                            Console.WriteLine(string.Join(", ", group.Select(q => q.Value.ToString("F3"))));
+                        }
         }
     }
 }
