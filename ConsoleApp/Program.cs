@@ -10,6 +10,18 @@ namespace Supplement1_P10
             RandomFloatGenerator generator = new RandomFloatGenerator();
             var enumerator = generator.GetEnumerator();
             
+                while (true)
+            {
+                Console.WriteLine("Enter 'A' to add a quarter or 'Q' to quit:");
+                string input = Console.ReadLine()?.Trim().ToUpper();
+                
+                if (input == "Q")
+                {
+                    Console.WriteLine("Application closed.");
+                    break;
+                }
+                else if (input == "A")
+                {
         }
     }
 }
