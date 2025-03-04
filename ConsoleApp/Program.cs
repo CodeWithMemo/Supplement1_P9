@@ -34,6 +34,16 @@ namespace Supplement1_P10
                         {
                             Console.WriteLine(string.Join(", ", group.Select(q => q.Value.ToString("F3"))));
                         }
+                        catch (InvalidSequenceException ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message} The invalid number was {enumerator.Current:F3}.");
+                        break;
+                    }
+                    catch (ArgumentOutOfRangeException ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
+                }
         }
     }
 }
