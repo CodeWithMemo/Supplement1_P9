@@ -5,6 +5,10 @@ using System.Linq;
 namespace Supplement1_P9
 {
     class Program{
+        /// <summary>
+        /// The main method that runs the console application.
+        /// It allows the user to add randomly generated quarters or quit the application.
+        /// </summary>
         static void main{
             List<Quarter> quarters = new List<Quarter>();
             RandomFloatGenerator generator = new RandomFloatGenerator();
